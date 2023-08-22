@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41948b3e-9edd-4b8f-b38c-d898b823f1a8" name="Changes" comment="Add .gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -51,7 +50,8 @@
       <option name="presentableId" value="Default" />
       <updated>1691163011363</updated>
       <workItem from="1691163012888" duration="9821000" />
-      <workItem from="1692115385348" duration="3754000" />
+      <workItem from="1692115385348" duration="4436000" />
+      <workItem from="1692692628427" duration="3586000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1691163285367</created>
