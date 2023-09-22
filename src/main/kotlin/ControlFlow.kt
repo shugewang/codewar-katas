@@ -1,22 +1,22 @@
 import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-fun getAnimalSounds(animal: String) {
+fun getAnimalSounds(animal: String): String {
     val animal = animal.lowercase(Locale.getDefault())
-    when (animal) {
-        "dog" -> println("bark")
-        "cat" -> println("meow")
-        else -> println("?")
+    return when (animal) {
+        "dog" -> "bark"
+        "cat" -> "meow"
+        else -> "?"
     }
 }
 fun getGreeting(): String {
-    val formatter = DateTimeFormatter.ofPattern(" HH:mm")
-    val currentTime = LocalDateTime.now().format(formatter)
+    val currentTime = LocalTime.now()
     return when (currentTime) {
-        in "06:00...12:00" -> "Good morning"
-        in "12:00...18:00" -> "Good afternoon"
-        in "18:00...20:00" -> "Good evening"
+        in LocalTime.parse("06:00")..LocalTime.parse("12:00") -> "Good morning"
+        in LocalTime.parse("12:00")..LocalTime.parse("18:00") -> "Good afternoon"
+        in LocalTime.parse("18:00")..LocalTime.parse("20:00") -> "Good evening"
         else -> "Good night"
     }
 }
@@ -79,7 +79,7 @@ fun justPrintEverythingInTheRangeButInReverse(min: Int, max: Int) {
 
 fun justPrintEveryOtherNumberInTheRange(min: Int, max: Int) {
     var list: MutableList<Int> = mutableListOf()
-    for (i in min..max step 2) {
+    for (i in min..max step 20) {
         list.add(i)
     }
     println(list)
@@ -87,12 +87,12 @@ fun justPrintEveryOtherNumberInTheRange(min: Int, max: Int) {
 
 fun getAnimalSoundsWithIfs(animal: String) {
     val animal = animal.lowercase(Locale.getDefault())
-    val sound = if (animal == "dog") "bark" else if (animal == "cat") "meow" else "?"
+    val sound = if (animal == "dog") "bark" else if (animal == "cat") "meow" else listOf(1)
     println(sound)
 }
 
 fun main() {
-    getAnimalSounds("fox") // when expression value matching
+    println(getAnimalSounds("dog")) // when expression value matching
     println(getGreeting()) // when expression pattern matching?
     getAllMultiplesOfFiveInc(10,20) // for loops, inclusive range
     getAllMultiplesOfFiveExc(10,20) // for loops, exclusive range
@@ -101,5 +101,5 @@ fun main() {
     justPrintEverythingInTheRange(1,10) // upto
     justPrintEverythingInTheRangeButInReverse(1,10) // downto
     justPrintEveryOtherNumberInTheRange(1,10) // step
-    getAnimalSoundsWithIfs("cat") // if expressions return a value
+    getAnimalSoundsWithIfs("fox") // if expressions return a value
 }
