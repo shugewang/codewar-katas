@@ -87,7 +87,12 @@ fun nestedDemo(inputList: List<List<Int>>): List<Int> {
     return combine
 }
 
+data class User(val id: String) {
+}
+
 fun main() {
+    val user1 = User("1")
+    println(user1.toString())
     val a2 = arrayOf("lively", "alive", "harp", "sharp", "armstrong")
     println("first and last: " + Arrays.toString(inArray(arrayOf<String>("live", "strong", "arp"), a2)))
     println("filter, any: " + inArrayRefactor(arrayOf("live", "strong", "arp"), a2).contentToString())

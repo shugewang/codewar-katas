@@ -16,6 +16,10 @@ class Animal(val name: String) {
     }
 }
 
+fun Animal.getBestAnimal() {
+    println("the best animal is always a dog!")
+}
+
 class AnimalCollection : Iterable<Animal> {
     private val animals = mutableListOf<Animal>()
 
@@ -52,4 +56,6 @@ fun main() {
     for (animal in animalCollection) {
         println(animal.name)
     }
+    val cat = Animal("cat")
+    cat.getBestAnimal()
 }

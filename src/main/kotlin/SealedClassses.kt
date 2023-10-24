@@ -1,5 +1,5 @@
 // fixed number of subclasses
-// useful fore creating known and fixed hierarchies
+// useful for creating known and fixed hierarchies
 sealed class Shape {
     class Circle(val radius: Double) : Shape()
     class Square(val length: Double) : Shape()

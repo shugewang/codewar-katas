@@ -1,4 +1,4 @@
-open class Pet(val name: String, val species: String) {
+open class Pet constructor(val name: String, val species: String) {
     init {
         println("Creating an $species named $name")
     }

@@ -11,7 +11,7 @@ fun main() {
     var person1 = Person("Bob", 25)
     var person2 = person1 // Reference to the same object
 
-    person1.age = 26 // Modifying the object
+    person1.age = 26 // modifies the object
 
     println("Person 1: ${person1.name}, ${person1.age}")
     println("Person 2: ${person2.name}, ${person2.age}")
